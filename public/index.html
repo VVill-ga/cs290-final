@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Grenze&family=Grenze+Gotisch&display=swap" rel="stylesheet">
+		<title>Game Page</title>
+		<link rel="stylesheet" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div class="total"  id="intro">
+			<header>
+				<h1>Newsie</h1>
+				<a href="#">Meet the Developers!</a>
+			</header>
+			<div id="code" class="centered active">
+				<h2>Enter Code</h2>
+				<input maxlength="6" placeholder="ABC123" onkeypress="return manageCodeInput(event);">
+				<button onclick="procede(this.parentElement);">&gt;</button>
+				<a href="#create">Or Start a New Game&gt;</a>
+			</div>
+			<div id="password" class="centered">
+				<h2>Enter Password</h2>
+				<input placeholder="password1234">
+				<button onclick="procede(this.parentElement);">&gt;</button>
+				<a href="#create">&lt;Back</a>
+			</div>
+			<div id="nickname" class="centered">
+				<h2>Enter Nickname</h2>
+				<input placeholder="Kevin Heart">
+				<button onclick="procede(this.parentElement);">&gt;</button>
+				<a href="#create">&lt;Back</a>
+			</div>
+			<footer>
+				<a href="#">Terms of Service</a>
+				<p>||</p>
+				<a href="#">Privacy Policy</a>
+			</footer>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
