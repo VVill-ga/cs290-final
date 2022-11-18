@@ -20,12 +20,6 @@ function procede(cont){
 				}
 			}
 		break;
-		case "password":
-			cont.style.animation = "think 1s cubic-bezier(0.5, 0, 0.5, 1) 0s infinite";
-			firstWrong = undefined;
-			//send code to database, check if password is correct. await response. codeResponse(response, cont);
-			return;
-		break;
 		case "nickname":
 			cont.style.animation = "think 1s cubic-bezier(0.5, 0, 0.5, 1) 0s infinite";
 			//send nickname to database.
