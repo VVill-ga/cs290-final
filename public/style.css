@@ -9,6 +9,7 @@ html, body{
 	height: 100%;
 	background: linear-gradient(#fff, #feb, #feb) #feb;
 	font-family: 'Grenze', serif;
+	display: flex;
 }
 header{
 	position: fixed;
@@ -46,14 +47,11 @@ header a:hover{
 	border-radius: 15px;
 	border-style: solid;
 	border-color: var(--border);
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	display: none;
 }
 .active{
 	display: initial;
+	margin: auto;
 }
 h2{
 	width: 100%;
@@ -74,11 +72,15 @@ input{
 	font-weight: bold;
 	color: white;
 	border-color: var(--border);
-	font-family: sans-serif;
+	font-family: monospace;
 	width: 7em;
+	height: 2em;
 }
 input::placeholder{
 	color: #000a;
+}
+input:focus{
+	border-color: white;
 }
 *:focus{
 	outline: none;
@@ -86,10 +88,16 @@ input::placeholder{
 button{
 	background-color: #0007;
 	border-radius: 25px;
-	color: white;
+	color: #000a;
 	font-weight: bold;
 	border-color: var(--border);
 	cursor: pointer;
+	font-family: monospace;
+	height: 2em;
+}
+button:hover{
+	color: white;
+	border-color: white;
 }
 .centered a{
 	margin: 0 auto;
@@ -99,7 +107,6 @@ button{
 	display: block;
 }
 .centered a:hover{
-	color: white;
 	font-weight: normal;
 }
 footer{
@@ -129,16 +136,16 @@ footer p{
 		--border: #f00;
 	}
 	25%{
-		transform: translate(-50%, -50%) rotate(12deg);
+		transform: rotate(12deg);
 	}
 	50%{
-		transform: translate(-50%, -50%);
+		transform: none;
 	}
 	75%{
-		transform: translate(-50%, -50%) rotate(-12deg);
+		transform: rotate(-12deg);
 	}
 	100%{
-		transform: translate(-50%, -50%);
+		transform: none;
 		--border: #f00;
 	}
 }
@@ -147,15 +154,13 @@ footer p{
 		--border: #af7;
 	}
 	100%{
-		transform: translate(-100%, -50%);
-		left: 0;
+		transform: translate(-100%, 0);
 		--border: #af7;
 	}
 }
 @keyframes moveIn{
 	0%{
-		transform: translate(100%, -50%);
-		left: 100%;
+		transform: translate(100%, 0);
 		--border: #af7;
 	}
 	100%{
@@ -164,17 +169,17 @@ footer p{
 }
 @keyframes think{
 	0%{
-		transform: translate(-50%, -50%);
+		transform: translate(0, 0);
 		--border: #4cf;
 	}
 	25%{
-		transform: translate(-50%, -40%);
+		transform: translate(0, -10%);
 	}
 	75%{
-		transform: translate(-50%, -60%);
+		transform: translate(0, 10%);
 	}
 	100%{
-		transform: translate(-50%, -50%);
+		transform: translate(0, 0);
 		--border: #4cf;
 	}
 }
